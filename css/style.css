@@ -1,0 +1,61 @@
+.wrapper {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  perspective: 750px;
+  perspective-origin: 50% 50%;
+}
+
+.cube {
+  position: relative;
+  width: 250px;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+  transform-origin: 50% 125px;
+}
+
+.cube div {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 1px solid black;
+  background-color: rgba(0, 66, 132, .15);
+}
+
+.cube div h2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.front {
+  transform: translateZ(125px);
+}
+
+.back {
+  transform: translateZ(-125px) rotateY(180deg);
+}
+
+.top {
+  transform: rotateX(-90deg) translateY(-125px);
+  transform-origin: top center;
+}
+
+.bottom {
+  transform: rotateX(90deg) translateY(125px);
+  transform-origin: bottom center;
+}
+
+.left {
+  transform: rotateY(270deg) translateX(-125px);
+  transform-origin: center left;
+}
+
+.right {
+  transform: rotateY(-270deg) translateX(125px);
+  transform-origin: top right;
+}
